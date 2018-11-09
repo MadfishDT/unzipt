@@ -1,0 +1,27 @@
+{
+  "name": "unzipt",
+  "version": "0.0.1",
+  "description": "unzip file use only javascript code from zlibjs source",
+  "main": "unzip.min.js",
+  "types": "unzip.min.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadfishDT/unzipt.git"
+  },
+  "keywords": [
+    "unzip",
+    "zlibjs",
+    "typescript",
+    "javascript",
+    "node"
+  ],
+  "author": "MadfishDT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MadfishDT/unzipt/issues"
+  },
+  "homepage": "https://github.com/MadfishDT/unzipt#readme"
+}

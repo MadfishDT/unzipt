@@ -1,6 +1,6 @@
 {
   "name": "unzipt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "unzip file use only javascript code from zlibjs source",
   "main": "unzip.min.js",
   "types": "unzip.min.d.ts",

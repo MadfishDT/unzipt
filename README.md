@@ -22,10 +22,31 @@ npm inatall unzipt
 there is no dependencies
 
 **Zlibjs PKZIP APIS**
--
+* decompress(filename)
+* getFileHeaderAttribute(filename, attributeName) : 0.0.2 or higher version
+    - support attribute name
+        1. 'needVersion'
+        2. 'flags'
+        3. 'compression'
+        4. 'time'
+        5. 'date'
+        6. 'crc32'
+        7. 'compressedSize'
+        8. 'plainSize'
+        9. 'internalFileAttributes'
+        10. 'externalFileAttributes'
+    - how to get file permission number like '0o777'
+        ```javascript
+        const unzip = new Zlib.Unzip(compressed, null);
+        const filenames =  unzip.getFilenames();
+        const externalFA = unzip.getFileHeaderAttribute(filenames[0], 'externalFileAttributes');
+        const filemode = (externalFA >>> 16) & 0xffff;
+        ```
+* getFilenames()
+* setPassword(password)
 * Zlib TypeScript
 
-```
+```Typescript
 import { Zlib } from 'zlibt';
 import * as fs from 'fs';
     //compress
@@ -36,7 +57,7 @@ import * as fs from 'fs';
 ```
 * Zlib JavaScript
 
-```
+```javascript
 var  Zlib = require('zlibt').Zlib;
 
     //compress

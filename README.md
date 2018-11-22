@@ -5,7 +5,13 @@
 **original zlibjs code**
 * zlib min file: https://github.com/imaya/zlib.js.git
 
-**install**
+**version**
+-
+- 0.0.1: unzip buffer
+- 0.0.2: files attribute method support
+- 0.0.3: remove unecessary dependencies
+
+**installation**
 -
 ```
 npm inatall unzipt

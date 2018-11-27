@@ -10,6 +10,7 @@
 - 0.0.1: unzip buffer
 - 0.0.2: files attribute method support
 - 0.0.3: remove unecessary dependencies
+- 0.0.4: readme change
 
 **installation**
 -
@@ -48,6 +49,8 @@ there is no dependencies
         const externalFA = unzip.getFileHeaderAttribute(filenames[0], 'externalFileAttributes');
         const filemode = (externalFA >>> 16) & 0xffff;
         ```
+    -in case windows file system, do not use 'externalFileAttibute'. if you file zipped in windows, all files in zip file have externalFileAttribute '0'. so if you write file with node fs and apply externlaFileAttribute '0', all of files might be read only file. in case of windows, if externlaFileAttribute is '0', assign fs write file mode = 0o777
+     
 * getFilenames()
 * setPassword(password)
 * Zlib TypeScript
